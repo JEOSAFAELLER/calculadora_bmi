@@ -49,7 +49,20 @@ const BmiCalculator = () => {
         placeholder='Altura em cm'
         keyboardType='numeric' 
         />
-      
+      <TouchableOpacity
+      style={styles.button}
+        onPress={calculateBmi}
+      >
+
+        <Text style={styles.buttonText}>Calcular</Text>
+        
+      </TouchableOpacity>
+      <View style={styles.resultView}>
+        <Text style={styles.result}>{bmi}</Text>
+        <Text style={styles.result}>{description}</Text>
+
+      </View>
+
     </View>
   )
 }
@@ -86,5 +99,29 @@ const styles = StyleSheet.create({
         borderRadius:5,
         backgroundColor:"#cde0c9",
         fontSize:18
+    },
+    button:{
+        height:55,
+        margin:15,
+        borderWidth:1/2,
+        borderRadius:5,
+        backgroundColor:"#68b2a0",
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    buttonText:{
+        fontSize:20,
+        color:'#fff',
+        fontWeight:'bold'
+    },
+    resultView:{
+       margin:15,
+    },
+    result:{
+        fontSize:20,
+        color:'#2c6975',
+        fontWeight:'bold',
     }
+        
+
   });
