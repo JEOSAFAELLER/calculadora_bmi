@@ -1,5 +1,6 @@
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import React, {useState} from 'react'
+import Constants from 'expo-constants'
 
 const BmiCalculator = () => {
     const [weight, setWeight] = useState("")
@@ -32,7 +33,7 @@ const BmiCalculator = () => {
   return (
     <View style= {styles.container}>
         <View style={styles.title}>
-        <Text style={styles.titleText}>BMI Calculator</Text>
+        <Text style={styles.titleText}>Calculadora IMC</Text>
 
         </View>
         <TextInput
@@ -45,7 +46,7 @@ const BmiCalculator = () => {
          <TextInput
         style={styles.input}
         value={height}
-        onChangeText={(text) => setheight(text)}
+        onChangeText={(text) => setHeight(text)}
         placeholder='Altura em cm'
         keyboardType='numeric' 
         />
